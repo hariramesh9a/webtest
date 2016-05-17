@@ -1,13 +1,7 @@
-Feature: Test Parking calculator
-  BR1 If the parking lot is Short term parking and the user choose parking for 30mins or less
-  it should charge $1 else it should charge 2$ if its less than an hour
+        Feature: Test parking algorithm
+          Br  lot charges 1 dollar per 30 minutes for every other 30  minutes one dollar will be added up
+          Scenario: Validate short term parking
+            Given when user choose half and hour parking
+            When he exits the parking lot
+            Then user is charged with one dollar
 
-  Scenario: Selecting a Short Term Parking Lot
-    Given User selects a lot in short term parking
-    When User selects the parking for thirty mins
-    Then User should be charged one dollar
-
-  Scenario: Selecting a Short Term Parking Lot_longterm
-    Given User selects a lot in short term parking
-    When User selects the parking for more than thirty mins but less than one hour
-    Then User should be charged two dollars
