@@ -1,6 +1,7 @@
 require 'page-object'
-include PageObject
+
 class ParkingLot
+  include PageObject
   text_field(:entrytime, :name=> 'EntryTime')
   select(:lot ,:id=>'Lot')
   radio(:entrytimeam,:name=>'EntryTimeAMPM')
@@ -21,8 +22,11 @@ class ParkingLot
     exittimeam
     self.exitdate=exitdate
     submitpage
-    result
+    result_element
   end
+
 end
+
+
 
 
